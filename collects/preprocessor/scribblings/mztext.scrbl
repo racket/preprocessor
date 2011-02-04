@@ -41,7 +41,7 @@ explanation of the @DFlag{run} flag.
 @exec{mztext} can use arbitrary magic sequences, but for convenience,
 there is a default built-in dispatcher that connects Scheme code with
 the preprocessed text---by default, it is triggered by @litchar["@"].
-When file processing encounters this marker, control is transfered to
+When file processing encounters this marker, control is transferred to
 the command dispatcher.  In its turn, the command dispatcher reads a
 Scheme expression (using @scheme[read]), evaluates it, and decides
 what to do next.  In case of a simple Scheme value, it is converted to
@@ -185,13 +185,13 @@ their arity (preferring a the nullary treatment over the unary one):
        (format "<a href=~s>@tt{~a}</a>" (get-arg) (get-arg)))
     @(define (reftt)
        (format "<a href=~s>~a</a>" (get-arg) (tt)))
-    @ttref{www.racket-lang.org}{PLT Scheme}
-    @reftt{www.racket-lang.org}{PLT Scheme}
+    @ttref{racket-lang.org}{Racket}
+    @reftt{racket-lang.org}{Racket}
 
   ==>
 
-    <a href="www.racket-lang.org"><tt>PLT Scheme</tt></a>
-    <a href="www.racket-lang.org"><tt>PLT Scheme</tt></a>
+    <a href="racket-lang.org"><tt>Racket</tt></a>
+    <a href="racket-lang.org"><tt>Racket</tt></a>
 }|
 
   Note that in @scheme[reftt] we use @scheme[tt] without arguments since it will
@@ -204,11 +204,11 @@ their arity (preferring a the nullary treatment over the unary one):
     @defcommand{tt}{X}{<tt>X</tt>}
     @defcommand{ref}{url text}{<a href="url">text</a>}
     @defcommand{ttref}{url text}{<a href="url">@tt{text}</a>}
-    @ttref{www.racket-lang.org}{PLT Scheme}
+    @ttref{racket-lang.org}{Racket}
 
   ==>
 
-    <a href="www.racket-lang.org"><tt>PLT Scheme</tt></a>
+    <a href="racket-lang.org"><tt>Racket</tt></a>
 }|}
 
   @item{A procedure of arity 1 is invoked differently---it is applied on a

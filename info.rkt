@@ -15,3 +15,6 @@
 (define pkg-desc "Preprocessors for text with embedded Racket code (mostly replaced by scribble/text)")
 
 (define pkg-authors '(eli))
+
+(define license
+  '(Apache-2.0 OR MIT))
